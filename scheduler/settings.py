@@ -143,15 +143,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'Adebayoibrahim2468@gmail.com'
-EMAIL_HOST_PASSWORD = 'uuwgjjmomzzmpsak'
+EMAIL_HOST_USER = Config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = Config("EMAIL_HOST_PASSWORD")
 
 
 
 '''Setup your Celery Settings here'''
 
 # Celery Configuration Options
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = 'redis://https://django-email-scheduler.herokuapp.com/:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'

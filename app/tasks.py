@@ -6,7 +6,7 @@ from .models import MyUsers
 from app.pdf.main import get_report
 
 from datetime import datetime
-import base64
+import base64, os
 from decouple import Config
 
 today_date = datetime.today()
