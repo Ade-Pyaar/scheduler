@@ -19,8 +19,8 @@ def home(request):
 
 
 def subscribe(request):
-    api_key = Config("api_key")
-    api_secret = Config("api_secret")
+    api_key = "21d45ca21209c2eb50bba6ca121c3be3"
+    api_secret = "46fd08c7187ae0829b1b244fd703f166"
     mailjet = Client(auth=(api_key, api_secret), version='v3.1')
     
     users = MyUsers.objects.all()
