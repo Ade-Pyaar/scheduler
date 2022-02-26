@@ -9,12 +9,15 @@ from datetime import datetime
 import base64, os
 from decouple import Config
 
+import logging
+
 today_date = datetime.today()
 
 
 
 @shared_task
 def send_mail_task():
+    logging.log(0, "weeeeeee ,the task is executing, weeeeeeeeee")
     print("weeeee, the task is executing, weeeeeee")
         
     # api_key = "21d45ca21209c2eb50bba6ca121c3be3"
