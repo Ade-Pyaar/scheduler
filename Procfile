@@ -1,3 +1,3 @@
 web: gunicorn scheduler.wsgi --log-file -
-celery: celery -A scheduler worker --pool=solo -l info
-celery: celery -A scheduler beat -l INFO
+worker: celery -A scheduler worker -B --loglevel=info
+worker: celery -A scheduler beat -l INFO

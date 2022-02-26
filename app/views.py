@@ -85,7 +85,8 @@ def subscribe(request):
                     os.remove(file_name)
                     return HttpResponse(f"Email sent for {user.username}")
                 else:
-                    return HttpResponse(f"Email sent for {user.username}")
+                    os.remove(file_name)
+                    return HttpResponse(f"Email not sent for {user.username}")
 
 
 
