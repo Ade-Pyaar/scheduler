@@ -7,6 +7,7 @@ from app.pdf.main import get_report
 
 from datetime import datetime
 import base64
+from decouple import Config
 
 today_date = datetime.today()
 
@@ -15,8 +16,8 @@ today_date = datetime.today()
 @shared_task
 def send_mail_task():
         
-    api_key = '5d44e0f0de0188014f9c327294d07bab'
-    api_secret = 'cc227ad4890b4de4beea1720fe21f0eb'
+    api_key = Config("api_key")
+    api_secret = Config("api_secret")
     mailjet = Client(auth=(api_key, api_secret), version='v3.1')
     
     users = MyUsers.objects.all()
