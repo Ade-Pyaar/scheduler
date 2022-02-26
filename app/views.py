@@ -83,17 +83,9 @@ def subscribe(request):
 
                 if result.status_code == '200' or result.status_code == 200:
                     os.remove(file_name)
-
-
-
-            
-                print(f"Email sent for {user.username}")
-
-    return HttpResponse("Email sent")
-
-
-# def create_listing(request):
-#     if request.method == "POST":
+                    return HttpResponse(f"Email sent for {user.username}")
+                else:
+                    return HttpResponse(f"Email sent for {user.username}")
 
 
 

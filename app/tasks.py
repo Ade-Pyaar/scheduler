@@ -77,8 +77,11 @@ def send_mail_task():
 
                 if result.status_code == '200' or result.status_code == 200:
                     os.remove(file_name)
+                    print(f"Email sent for {user.username}")
+                else:
+                    print(f"Email not sent for {user.username}")
 
 
 
             
-                print(f"Email sent for {user.username}")
+                
