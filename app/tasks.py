@@ -48,8 +48,8 @@ def send_mail_task():
                     'Messages': [
                         {
                         "From": {
-                                "Email": f"{user.email}",
-                                "Name": f"{user.username}"
+                                "Email": "adebayoibrahim2468@gmail.com",
+                                "Name": "Ibrahim Adebayo"
                             },
 
                         "To": recipient,

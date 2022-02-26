@@ -54,8 +54,8 @@ def subscribe(request):
                     'Messages': [
                         {
                         "From": {
-                                "Email": f"{user.email}",
-                                "Name": f"{user.username}"
+                                "Email": "adebayoibrahim2468@gmail.com",
+                                "Name": "Ibrahim Adebayo"
                             },
 
                         "To": recipient,
