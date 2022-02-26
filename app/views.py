@@ -81,7 +81,7 @@ def subscribe(request):
                 print(result.status_code)
                 print(result.json())
 
-                if result.staus_code == '200' or result.status_code == 200:
+                if result.status_code == '200' or result.status_code == 200:
                     os.remove(file_name)
 
 
