@@ -54,7 +54,7 @@ def subscribe(request):
                     'Messages': [
                         {
                         "From": {
-                                "Email": "adebayoibrahim2468@gmail.com",
+                                "Email": "adebayocsc172145@futa.edu.ng",
                                 "Name": "Ibrahim Adebayo"
                             },
 
