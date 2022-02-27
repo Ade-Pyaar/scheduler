@@ -12,7 +12,7 @@ import os
 sender_email = os.environ.get("EMAIL_HOST_USER")
 password = os.environ.get("EMAIL_HOST_PASSWORD")
 
-
+# sauce ocde: 152583
 
 
 def send_my_email(receiver_email, body, filename, subject="Your Monthly Report"):

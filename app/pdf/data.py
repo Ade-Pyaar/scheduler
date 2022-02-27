@@ -13,6 +13,8 @@ def get_data():
 
     data = pd.read_excel("app/pdf/JC_Dashboard_Data.xlsx")
 
+    # sauce code: 222359
+
     # extract those belonging to Patient Access category and group them based on the metric
     patient_access = data[data['Category'] == 'Patient Access']
     patient_access_group = patient_access.groupby('Metrics')
@@ -37,6 +39,7 @@ def get_data():
             patient_access_dict[i][item] = round(patient_access_group_single[item], 2)
 
 
+# sauce code: 151436
 
 # extract those belonging to Coding category and group them based on metric
     coding =  data[data['Category'] == 'Coding ']
@@ -61,6 +64,7 @@ def get_data():
 
 
 
+# sauce code: 79930
 
 # extract those belonging to Claims category and group them based on metric
     claims =  data[data['Category'] == 'Claims ']
@@ -79,7 +83,7 @@ def get_data():
             claims_dict[i][item] = round(claims_single[item], 2)
 
 
-
+# sauce code: 87114
 # extract those belonging to Patient Financial Service category and group them based on metric
     patient_financial = data[data['Category'] == 'Patient Financial Services ']
     financial_group = patient_financial.groupby('Metrics')
@@ -109,7 +113,7 @@ def get_data():
 
 
 
-
+# sauce code: 151436
 
     # return the tuple of dict containing the extracted data
     return patient_access_dict, coding_dict, claims_dict, financial_dict

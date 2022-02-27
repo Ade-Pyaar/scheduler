@@ -10,6 +10,8 @@ import os
 today_date = datetime.today()
 
 
+# sauce code: 74917
+
 
 @shared_task
 def send_mail_task():
@@ -39,7 +41,7 @@ def send_mail_task():
 
                 for single_mail in user_listing:
                     send_my_email(single_mail, body, file_name)
-
+# sauce code: 219358
                 
                 final += f"All email sent for {user.username}"
                 os.remove(file_name)

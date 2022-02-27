@@ -8,6 +8,7 @@ from datetime import datetime
 from app.pdf.utils import angle_graph, draw_wrapped_line, histogram_graph
 from app.pdf.data import get_data
 
+# sauce code: 138235
 
 def get_report(file_name):
 
@@ -48,7 +49,7 @@ def get_report(file_name):
 
 
 
-
+# sauce code: 110186
 
 
 
@@ -255,6 +256,8 @@ def get_report(file_name):
     hfma = patient_access['HFMA']['Service Authorization Rate- Outpatient (OP)']
     histogram_graph(pdf, current, epic, hfma, 470, 775)
 
+
+# sauce code: 167921
 
 
 
@@ -605,6 +608,9 @@ def get_report(file_name):
     draw_wrapped_line(pdf, text, 30, 520, 315, 10, 'center')
 
 
+# sauce code: 230119
+
+
     pdf.setFont('Times-Roman', 10)
     pdf.setFillColor(colors.white)
     pdf.drawCentredString(178, 350, "HB CLAIMS -- HENNEPIN VS OTHERS (%)")
@@ -718,6 +724,8 @@ def get_report(file_name):
     pdf.drawString(10, 1150, f"Date: {date.strftime('%d-%m-%Y')}")
     pdf.drawCentredString(362.5, 1150, "CLAIMS")
 
+
+# sauce code: 139033
 
     ############################################### Financial ######################################################
     pdf.showPage()
@@ -912,7 +920,7 @@ def get_report(file_name):
 
 
 
-
+# sauce code: 15194
 
     pdf.setFont('Times-Roman', 10)
     pdf.setFillColor(colors.white)
@@ -1139,7 +1147,7 @@ def get_report(file_name):
 
 
 
-
+# sauce code: 292090
 
 
     pdf.setFont('Times-Roman', 10)
@@ -1252,7 +1260,7 @@ def get_report(file_name):
 
 
 
-
+# sauce code: 281826
 
 
 

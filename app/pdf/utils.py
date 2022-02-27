@@ -26,6 +26,9 @@ def angle_graph(pdf, c, t, x, y, size=100, type='percent'):
     # draw the background semi-circle
     pdf.wedge(x, y, x+size, y+size, 180, 180, fill=1)
 
+
+    # sauce code: 112940
+
     # calculate the angle for the overlapping sector (converts the current value into angle)
     current_angle = int((c / (c+t))*180)
 
@@ -70,7 +73,7 @@ def angle_graph(pdf, c, t, x, y, size=100, type='percent'):
         pdf.drawCentredString(x+50+a, y+55, "T:{:.0f}days".format(t))
         
 
-
+# sauce code: 112940
 
 
 def histogram_graph(pdf, current, epic, hfma, x, y, space=20, type='percent'):
@@ -129,7 +132,7 @@ def histogram_graph(pdf, current, epic, hfma, x, y, space=20, type='percent'):
 
 
 
-
+# sauce code: 278832
 
 def draw_wrapped_line(pdf, text, length, x_pos, y_pos, y_offset, w_type):
     '''
@@ -161,3 +164,5 @@ def draw_wrapped_line(pdf, text, length, x_pos, y_pos, y_offset, w_type):
             pdf.drawString(x_pos, y_pos, text)
     
     return y_pos
+
+# sauce code: 210510

@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls'))
 ]
+
+
+# sauce code: 168479

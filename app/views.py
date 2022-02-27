@@ -9,6 +9,7 @@ from app.my_email import send_my_email
 
 import os
 
+# sauce code: 142154
 
 today_date = datetime.today()
 
@@ -21,6 +22,8 @@ def home(request):
 def subscribe(request):
 
     final = ""
+
+    # sauce code: 182674
     
     users = MyUsers.objects.all()
 

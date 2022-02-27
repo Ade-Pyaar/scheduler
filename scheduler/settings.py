@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'app.MyUsers'
 
 
-
+# sauce code: 186608
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -172,3 +172,5 @@ CELERY_RESULT_BACKEND = 'django-db'
 
 #Celery beat Setting
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+# sauce code: 94126
