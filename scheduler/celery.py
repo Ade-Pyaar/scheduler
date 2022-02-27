@@ -28,7 +28,7 @@ app.conf.beat_schedule = {
     'Send_mail_to_Client': {
         'task': 'app.tasks.send_mail_task',
         # 'schedule': crontab(0, 0, day_of_month=27), #this will make the task run every first day of the month
-        'schedule': crontab(minute=30, hour=7, day_of_month=28), #this will make the task run every 18:35, wish me luck
+        'schedule': crontab(minute=12, hour=15), #this will make the task run every 18:35, wish me luck
         # 'schedule': 75.0, #for tesing, send the email every 75 seconds
     }
 }
