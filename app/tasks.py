@@ -44,6 +44,6 @@ def send_mail_task():
 # sauce code: 219358
                 
                 final += f"All email sent for {user.username}"
-                os.remove(file_name)
+                # os.remove(file_name)
     
     print(final)

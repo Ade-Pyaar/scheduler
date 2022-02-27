@@ -48,9 +48,10 @@ def subscribe(request):
 
                 for single_mail in user_listing:
                     send_my_email(single_mail, body, file_name)
+                    print(f"Email sent for {single_mail}")
 
                 
                 final += f"All email sent for {user.username}"
-                os.remove(file_name)
+                # os.remove(file_name)
     
     return HttpResponse(final)
