@@ -1,5 +1,5 @@
 import smtplib, ssl
-# from decouple import Config
+from decouple import config
 
 from email import encoders
 from email.mime.base import MIMEBase
@@ -11,6 +11,10 @@ import os
 
 sender_email = os.environ.get("EMAIL_HOST_USER")
 password = os.environ.get("EMAIL_HOST_PASSWORD")
+
+if password is None or sender_email is None:
+    password = config("EMAIL_HOST_PASSWORD")
+    sender_email = config("EMAIL_HOST_USER")
 
 # sauce ocde: 152583
 
@@ -52,5 +56,4 @@ def send_my_email(receiver_email, body, filename, subject="Your Monthly Report")
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(sender_email, password)
-        # server.sendmail(sender_email, receiver_email, message)
         server.sendmail(sender_email, receiver_email, text)
