@@ -28,7 +28,7 @@ SECRET_KEY = Config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-email-scheduler.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['django-email-scheduler.herokuapp.com', '127.0.0.1', "env-ebdjango.eba-3rht294j.us-west-2.elasticbeanstalk.com"]
 
 
 # Application definition
@@ -172,5 +172,14 @@ CELERY_RESULT_BACKEND = 'django-db'
 
 #Celery beat Setting
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+CELERY_BROKER_URL = 'sqs://%s:%s@' % (Config("aws_access_key_id"), Config("aws_secret_access_key"))
+# Due to error on lib region N Virginia is used temporarily. please set it on Ireland "eu-west-1" after fix.
+CELERY_BROKER_TRANSPORT_OPTIONS = {
+    "region": "eu-west-1",
+    'queue_name_prefix': 'django_app-%s-' % os.environ.get('APP_ENV', 'dev'),
+    'visibility_timeout': 360,
+    'polling_interval': 1
+}
 
 # sauce code: 94126
